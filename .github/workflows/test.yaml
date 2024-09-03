@@ -67,7 +67,7 @@ jobs:
           path: ~/.cache/firebase/emulators
           key: firebase_emulators
       - name: 'Download Artifacts'
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
       - name: Expand Artifact
         run: |
           chmod +x reactfire-${{ github.run_id }}/unpack.sh
@@ -86,7 +86,7 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
       - name: 'Download Artifacts'
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
       - name: Publish
         run: |
           cd ./reactfire-${{ github.run_id }}/
